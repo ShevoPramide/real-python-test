@@ -1,0 +1,7 @@
+import sqlite3
+
+with sqlite3.connect('new.db') as conn:
+	cursor = conn.cursor()
+	content = [('egypt','Eg',45643),('sudan','sa',53452342),('damam','da',23412421)]
+	execute_many("INSERT INTO population VALUES (?,?,?)",content)
+	
